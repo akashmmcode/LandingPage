@@ -171,3 +171,13 @@
 #container:hover #image {
   bottom: 0;
 }
+
+footer {
+  background-color: #000000;
+}
+
+footer > h1 {
+  margin: 0;
+  height: 10rem;
+  line-height: 10rem;
+}

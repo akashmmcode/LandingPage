@@ -171,6 +171,9 @@ const HelloComponent = () => {
           <input class="line-input" placeholder="Message" />
         </div>
       </div>
+      <footer>
+        <h1>"LOGO"</h1>
+      </footer>
     </>
   );
   s;
