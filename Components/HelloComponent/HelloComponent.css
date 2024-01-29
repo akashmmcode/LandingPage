@@ -1,0 +1,173 @@
+.hello {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 6rem;
+  padding: 3rem;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.hello span {
+  color: darkgray;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.info h4 {
+  margin: 0;
+  font-weight: 300;
+  color: darkgray;
+}
+
+.marquee {
+  height: 90px;
+  margin-top: 40px;
+  overflow: hidden;
+  display: flex;
+}
+
+.marquee img {
+  height: 100%;
+  object-fit: contain;
+}
+
+.video img {
+  width: 100%;
+}
+
+.desc {
+  padding: 3rem;
+}
+
+.desc h1 {
+  font-weight: 400;
+}
+
+.desc h1 > span {
+  color: darkgray;
+}
+
+.works {
+  display: flex;
+  flex-direction: row;
+  margin-left: 3rem;
+  flex-wrap: wrap;
+}
+
+.child {
+  flex: 1 1 50%;
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+  padding: 15px; /* Add padding for better spacing, adjust as needed */
+}
+
+.works .child h1 {
+  font-size: xxx-large;
+  margin: 0;
+}
+
+.works .child h2 {
+  font-weight: 200;
+}
+
+/* Add a media query to adjust layout for smaller screens if necessary */
+@media (max-width: 768px) {
+  .child {
+    flex: 1 1 100%; /* On smaller screens, make each child take 100% of the width */
+  }
+}
+
+.firstwork,
+.thirdwork {
+  padding: 3rem;
+}
+
+.topics h1 {
+  font-size: 6rem;
+  margin-left: 3rem;
+}
+
+.milestones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.count {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.count h4 {
+  margin: 0;
+}
+
+.count2 > h4 {
+  margin: 0;
+}
+
+.count3 h4 {
+  margin: 0;
+}
+
+.line-input {
+  border: none;
+  border-bottom: 1px solid darkgray; /* You can adjust the color and style */
+  background: none;
+  outline: none;
+  padding: 0;
+  margin-top: 4rem;
+  width: 100%;
+  box-sizing: content-box; /* To prevent the border from increasing the width */
+  height: 5rem;
+  font-size: 4rem;
+}
+
+.line-input::placeholder {
+  font-size: 4rem;
+}
+
+.contact h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.topics h1:hover {
+  color: darkgray;
+}
+
+#container {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+}
+
+#text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  transition: bottom 0.3s ease-in-out;
+}
+
+#image {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  transition: bottom 0.3s ease-in-out;
+}
+
+#container:hover #text {
+  bottom: 100%;
+}
+
+#container:hover #image {
+  bottom: 0;
+}

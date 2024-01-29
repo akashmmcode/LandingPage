@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header h1 {
+  margin-top: 5px;
+}
+
+.header a {
+  text-decoration: none; /* Remove underline */
+}
+
+.services {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin-right: 10px;
+}
+
+.services a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+html {
+  scroll-behavior: smooth;
+}
