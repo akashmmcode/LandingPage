@@ -4,10 +4,11 @@
   padding: 3rem;
   margin-bottom: 0;
   margin-top: 0;
+  color: #ffffff;
 }
 
 .hello span {
-  color: darkgray;
+  color: darkgray;  
 }
 
 .info {
@@ -81,6 +82,7 @@
 
 .desc h1 {
   font-weight: 400;
+  color: #ffffff;
 }
 
 .desc h1 > span {
@@ -105,10 +107,12 @@
 .works .child h1 {
   font-size: xxx-large;
   margin: 0;
+  color: #ffffff;
 }
 
 .works .child h2 {
   font-weight: 200;
+  color: #ffffff;
 }
 
 /* Add a media query to adjust layout for smaller screens if necessary */
@@ -133,6 +137,7 @@
 .topics h1 {
   font-size: 6rem;
   margin-left: 3rem;
+  color: #ffffff;
 }
 
 .milestones {
@@ -178,6 +183,7 @@
 .contact h1 {
   font-size: 4rem;
   text-align: center;
+  color: #ffffff;
 }
 
 .topics h1:hover {
@@ -227,6 +233,7 @@ footer > h1 {
   height: 10rem;
   line-height: 10rem;
   text-align: center;
+  color: #ffffff;
 }
 
 .topics-details {
@@ -252,6 +259,7 @@ footer > h1 {
 .description{
   font-size: 1.5rem;
   width: 50%;
+  color: #ffffff;
 }
 
 .sendmail{
@@ -264,6 +272,14 @@ footer > h1 {
   justify-content: space-between;
 }
 
+
+.social h5{
+  color: #ffffff;
+}
+
+.social h3{
+  color: #ffffff;
+}
 
 
 .social h5:hover {

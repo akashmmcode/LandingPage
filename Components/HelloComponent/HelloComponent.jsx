@@ -217,9 +217,9 @@ const HelloComponent = () => {
               <motion.div className="topics-details">
                 <img src={Hover}></img>
                 <h3 className="description">
-                  Unleash your brand's potential with our design-as-a-service,
-                  merging creativity and functionality for visually striking and
-                  impactful solutions.
+                  Empower your insights with our research services, leveraging
+                  rigorous methodologies to uncover valuable data and drive
+                  informed decisions.
                 </h3>
               </motion.div>
             )}
@@ -243,9 +243,9 @@ const HelloComponent = () => {
               <motion.div className="topics-details">
                 <img src="https://images.pexels.com/photos/326518/pexels-photo-326518.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"></img>
                 <h3 className="description">
-                  Unleash your brand's potential with our design-as-a-service,
-                  merging creativity and functionality for visually striking and
-                  impactful solutions.
+                  Unlock your digital potential through our development
+                  services, where innovation and expertise converge to craft
+                  scalable and cutting-edge solutions
                 </h3>
               </motion.div>
             )}
@@ -269,9 +269,8 @@ const HelloComponent = () => {
               <motion.div className="topics-details">
                 <img src="https://images.pexels.com/photos/1437318/pexels-photo-1437318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"></img>
                 <h3 className="description">
-                  Unleash your brand's potential with our design-as-a-service,
-                  merging creativity and functionality for visually striking and
-                  impactful solutions.
+                  Elevate your brand's allure through our strategic branding,
+                  fusing creativity with purpose for a lasting market impact.
                 </h3>
               </motion.div>
             )}
@@ -362,7 +361,7 @@ const HelloComponent = () => {
             </div>
           </div>
 
-          <div style={{display:"flex",flexDirection:"row",gap:"20px"}}>
+          <div style={{ display: "flex", flexDirection: "row", gap: "20px" }}>
             <div className="abc">
               <h3>Blogs</h3>
               <h3>Privacy Policy</h3>
