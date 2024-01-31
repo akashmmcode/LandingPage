@@ -375,7 +375,7 @@ const HelloComponent = () => {
           </div>
         </section>
 
-        <img src={logo1}></img>
+        <img className="footer-logo" src={logo1}></img>
       </footer>
     </>
   );
