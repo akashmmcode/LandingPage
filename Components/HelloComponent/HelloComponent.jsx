@@ -1,7 +1,9 @@
-import React from "react";
+// import React from "react";
+import React, { useState, useEffect } from "react";
 import "./HelloComponent.css";
 import { GoArrowRight } from "react-icons/go";
 import { GoArrowDown } from "react-icons/go";
+import { motion, animate, useScroll } from "framer-motion";
 import video from "../../src/assets/Video.png";
 import Picture from "../../src/assets/Picture.png";
 import Picture1 from "../../src/assets/Picture1.png";
@@ -9,29 +11,47 @@ import Picture2 from "../../src/assets/Picture2.png";
 import Picture3 from "../../src/assets/Picture3.png";
 
 const HelloComponent = () => {
-  // Create a new Date object
-  const currentDate = new Date();
+  const [currentTime, setCurrentTime] = useState(new Date());
+  const hours = currentTime.getHours();
+  const minutes = currentTime.getMinutes();
+  const seconds = currentTime.getSeconds();
 
-  // Get the current time components
-  const hours = currentDate.getHours();
-  const minutes = currentDate.getMinutes();
-  const seconds = currentDate.getSeconds();
+  const [isOpenDesign, setIsOpenDesign] = useState(false);
+  const [isOpenResearch, setIsOpenResearch] = useState(false);
+  const [isOpenDevelop, setIsOpenDevelop] = useState(false);
+  const [isOpenBranding, setIsOpenBranding] = useState(false);
 
-  // Format the time
+  useEffect(() => {
+    // Update the time every second
+    const intervalId = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+
+    // Clear the interval when the component is unmounted
+    return () => clearInterval(intervalId);
+  }, []); // Empty dependency array ensures the effect runs only once on mount
+
   const formattedTime = `${hours}:${minutes}:${seconds}`;
 
-  // Display the current time
-  console.log("Current Time:", formattedTime);
   return (
     <>
       <div>
-        <h1 className="hello">
-          Make your visual dreams come <span>true.</span>
-        </h1>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 1.5, type: "tween" }}
+        >
+          <h1 className="hello">
+            Make your visual dreams come <span>true.</span>
+          </h1>
+        </motion.div>
         <div className="info">
           <h4>Digital agency New York</h4>
           <h4>
-            Local time <GoArrowRight /> {formattedTime}
+            Local time <GoArrowRight />{" "}
+            <span className="time" style={{ color: "aqua" }}>
+              {formattedTime}
+            </span>
           </h4>
           <GoArrowDown />
           <h4>
@@ -112,17 +132,162 @@ const HelloComponent = () => {
             </h2>
           </div>
           <div className="child">
-            <img src={Picture} className="firstwork"></img>
-            <img src={Picture1}></img>
-            <img src={Picture2} className="thirdwork"></img>
-            <img src={Picture3}></img>
+            <motion.img
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 1.1 }}
+              drag="x"
+              dragConstraints={{ left: -100, right: 100 }}
+              src={Picture}
+              className="firstwork"
+              alt="Description of your image"
+            />
+            <motion.img
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 1.1 }}
+              drag="x"
+              dragConstraints={{ left: -100, right: 100 }}
+              src={Picture1}
+              className="firstwork"
+              alt="Description of your image"
+            />
+            <motion.img
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 1.1 }}
+              drag="x"
+              dragConstraints={{ left: -100, right: 100 }}
+              src={Picture2}
+              className="firstwork"
+              alt="Description of your image"
+            />
+            <motion.img
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 1.1 }}
+              drag="x"
+              dragConstraints={{ left: -100, right: 100 }}
+              src={Picture3}
+              className="firstwork"
+              alt="Description of your image"
+            />
           </div>
         </section>
         <section className="topics">
-          <h1>Design</h1>
-          <h1>Research</h1>
-          <h1>Develop</h1>
-          <h1>Branding</h1>
+          <motion.div
+            layout
+            className="card"
+            transition={{ layout: { duration: 1, type: "spring" } }}
+            onMouseOver={() => setIsOpenDesign(!isOpenDesign)}
+          >
+            <motion.h1
+              layout="position"
+              whileHover={{ scale: 1.3, color: "#00cccc", originX: 0 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              Design
+            </motion.h1>
+
+            {isOpenDesign && (
+              <motion.div className="topics-details">
+                <img src="https://images.pexels.com/photos/323645/pexels-photo-323645.jpeg?auto=compress&cs=tinysrgb&w=600"></img>
+              </motion.div>
+            )}
+          </motion.div>
+
+          <motion.div
+            layout
+            className="card"
+            transition={{ layout: { duration: 1, type: "spring" } }}
+            onMouseOver={() => setIsOpenResearch(!isOpenResearch)}
+          >
+            <motion.h1
+              layout="position"
+              whileHover={{ scale: 1.3, color: "#00cccc", originX: 0 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              Research
+            </motion.h1>
+
+            {isOpenResearch && (
+              <motion.div className="topics-details">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+                  maiores animi accusamus quia ipsam voluptas odio temporibus,
+                  consectetur quibusdam. Placeat magnam repellendus temporibus
+                  sapiente aliquid, ipsam fugit iusto explicabo necessitatibus?
+                </p>
+              </motion.div>
+            )}
+          </motion.div>
+
+          <motion.div
+            layout
+            className="card"
+            transition={{ layout: { duration: 1, type: "spring" } }}
+            onMouseOver={() => setIsOpenDevelop(!isOpenDevelop)}
+          >
+            <motion.h1
+              layout="position"
+              whileHover={{ scale: 1.3, color: "#00cccc", originX: 0 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              Develop
+            </motion.h1>
+
+            {isOpenDevelop && (
+              <motion.div className="topics-details">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+                  maiores animi accusamus quia ipsam voluptas odio temporibus,
+                  consectetur quibusdam. Placeat magnam repellendus temporibus
+                  sapiente aliquid, ipsam fugit iusto explicabo necessitatibus?
+                </p>
+              </motion.div>
+            )}
+          </motion.div>
+
+          <motion.div
+            layout
+            className="card"
+            transition={{ layout: { duration: 1, type: "spring" } }}
+            onMouseOver={() => setIsOpenBranding(!isOpenBranding)}
+          >
+            <motion.h1
+              layout="position"
+              whileHover={{ scale: 1.3, color: "#00cccc", originX: 0 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              Branding
+            </motion.h1>
+
+            {isOpenBranding && (
+              <motion.div className="topics-details">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+                  maiores animi accusamus quia ipsam voluptas odio temporibus,
+                  consectetur quibusdam. Placeat magnam repellendus temporibus
+                  sapiente aliquid, ipsam fugit iusto explicabo necessitatibus?
+                </p>
+              </motion.div>
+            )}
+          </motion.div>
+
+          {/* <motion.h1
+            whileHover={{ scale: 1.3, color: "#00cccc", originX: 0 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            Research
+          </motion.h1>
+          <motion.h1
+            whileHover={{ scale: 1.3, color: "#00cccc", originX: 0 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            Develop
+          </motion.h1>
+          <motion.h1
+            whileHover={{ scale: 1.3, color: "#00cccc", originX: 0 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            Branding
+          </motion.h1> */}
         </section>
         <div className="milestones">
           <div>

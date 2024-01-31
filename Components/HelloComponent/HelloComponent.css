@@ -27,11 +27,48 @@
   margin-top: 40px;
   overflow: hidden;
   display: flex;
+  white-space: nowrap;
 }
 
 .marquee img {
   height: 100%;
   object-fit: contain;
+  display: inline-block;
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-900%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .marquee img {
+    display: inline-block;
+    animation: marquee 30s linear infinite; /* Adjust the speed by changing the animation duration */
+    font-size: 3rem;
+  }
+}
+
+/* big screens */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .marquee img {
+    display: inline-block;
+    animation: marquee 30s linear infinite; /* Adjust the speed by changing the animation duration */
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  .marquee img {
+    display: inline-block;
+    animation: marquee 30s linear infinite; /* Adjust the speed by changing the animation duration */
+    font-size: 3rem;
+  }
 }
 
 .video img {
@@ -82,6 +119,13 @@
 .firstwork,
 .thirdwork {
   padding: 3rem;
+  width: 40%;
+}
+
+.secondwork,
+.fourthwork {
+  width: 40%;
+  margin-left: 2rem;
 }
 
 .topics h1 {
@@ -181,4 +225,14 @@ footer > h1 {
   height: 10rem;
   line-height: 10rem;
   text-align: center;
+}
+
+.topics-details {
+  width: 50%;
+  margin: auto;
+  margin-top: -100px;
+}
+
+.topics-details > img {
+  width: 30rem;
 }

@@ -8,6 +8,11 @@
   margin-top: 5px;
 }
 
+.logo {
+  height: 2rem;
+  margin-top: 15px;
+}
+
 .header a {
   text-decoration: none; /* Remove underline */
 }
@@ -21,6 +26,10 @@
 
 .services a:hover {
   text-decoration: underline; /* Underline on hover */
+}
+
+.services a {
+  color: darkgray;
 }
 
 html {

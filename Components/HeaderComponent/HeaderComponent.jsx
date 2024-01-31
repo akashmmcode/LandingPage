@@ -1,5 +1,6 @@
 import React from "react";
 import "./HeaderComponent.css";
+import logo from "../../src/assets/Logo.png";
 
 const HeaderComponent = () => {
   function smoothScrollTo(targetId) {
@@ -13,7 +14,7 @@ const HeaderComponent = () => {
   return (
     <>
       <div className="header">
-        <h1>"LOGO"</h1>
+        <img className="logo" src={logo}></img>
         <nav className="services">
           <a href="#" onClick={() => smoothScrollTo("home")}>
             <h3>Home</h3>
