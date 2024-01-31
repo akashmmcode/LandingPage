@@ -9,6 +9,8 @@ import Picture from "../../src/assets/Picture.png";
 import Picture1 from "../../src/assets/Picture1.png";
 import Picture2 from "../../src/assets/Picture2.png";
 import Picture3 from "../../src/assets/Picture3.png";
+import Hover from "../../src/assets/Hover.png";
+import logo1 from "../../src/assets/Logo1.png";
 
 const HelloComponent = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -188,6 +190,11 @@ const HelloComponent = () => {
             {isOpenDesign && (
               <motion.div className="topics-details">
                 <img src="https://images.pexels.com/photos/323645/pexels-photo-323645.jpeg?auto=compress&cs=tinysrgb&w=600"></img>
+                <h3 className="description">
+                  Unleash your brand's potential with our design-as-a-service,
+                  merging creativity and functionality for visually striking and
+                  impactful solutions.
+                </h3>
               </motion.div>
             )}
           </motion.div>
@@ -208,12 +215,12 @@ const HelloComponent = () => {
 
             {isOpenResearch && (
               <motion.div className="topics-details">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-                  maiores animi accusamus quia ipsam voluptas odio temporibus,
-                  consectetur quibusdam. Placeat magnam repellendus temporibus
-                  sapiente aliquid, ipsam fugit iusto explicabo necessitatibus?
-                </p>
+                <img src={Hover}></img>
+                <h3 className="description">
+                  Unleash your brand's potential with our design-as-a-service,
+                  merging creativity and functionality for visually striking and
+                  impactful solutions.
+                </h3>
               </motion.div>
             )}
           </motion.div>
@@ -234,12 +241,12 @@ const HelloComponent = () => {
 
             {isOpenDevelop && (
               <motion.div className="topics-details">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-                  maiores animi accusamus quia ipsam voluptas odio temporibus,
-                  consectetur quibusdam. Placeat magnam repellendus temporibus
-                  sapiente aliquid, ipsam fugit iusto explicabo necessitatibus?
-                </p>
+                <img src="https://images.pexels.com/photos/326518/pexels-photo-326518.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"></img>
+                <h3 className="description">
+                  Unleash your brand's potential with our design-as-a-service,
+                  merging creativity and functionality for visually striking and
+                  impactful solutions.
+                </h3>
               </motion.div>
             )}
           </motion.div>
@@ -260,12 +267,12 @@ const HelloComponent = () => {
 
             {isOpenBranding && (
               <motion.div className="topics-details">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-                  maiores animi accusamus quia ipsam voluptas odio temporibus,
-                  consectetur quibusdam. Placeat magnam repellendus temporibus
-                  sapiente aliquid, ipsam fugit iusto explicabo necessitatibus?
-                </p>
+                <img src="https://images.pexels.com/photos/1437318/pexels-photo-1437318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"></img>
+                <h3 className="description">
+                  Unleash your brand's potential with our design-as-a-service,
+                  merging creativity and functionality for visually striking and
+                  impactful solutions.
+                </h3>
               </motion.div>
             )}
           </motion.div>
@@ -334,10 +341,42 @@ const HelloComponent = () => {
           <h1>Contact us</h1>
           <input class="line-input" placeholder="Your email" />
           <input class="line-input" placeholder="Message" />
+
+          <h3 className="sendmail">
+            <u>Send My Message</u>
+            <span>
+              <GoArrowRight />
+            </span>
+          </h3>
         </div>
       </div>
       <footer>
-        <h1>"LOGO"</h1>
+        <section className="footer-section">
+          <div>
+            <h3>2020 Agency. All Rights Reserved</h3>
+            <div style={{ display: "flex", gap: "20px" }} className="social">
+              <h5>Awwwards</h5>
+              <h5>Dribble</h5>
+              <h5>Reddit</h5>
+              <h5>Behance</h5>
+            </div>
+          </div>
+
+          <div style={{display:"flex",flexDirection:"row",gap:"20px"}}>
+            <div className="abc">
+              <h3>Blogs</h3>
+              <h3>Privacy Policy</h3>
+              <h3>Works</h3>
+            </div>
+            <div className="def">
+              <h3>About Us</h3>
+              <h3>Works</h3>
+              <h3>Careers</h3>
+            </div>
+          </div>
+        </section>
+
+        <img src={logo1}></img>
       </footer>
     </>
   );

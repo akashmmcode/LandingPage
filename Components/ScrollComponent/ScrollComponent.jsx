@@ -14,7 +14,7 @@ const CircleIndicator = () => {
         left: 0,
         heigth: 10,
         transformOrigin: "0%",
-        background: "blue",
+        background: "#00cccc",
         height: "5px",
       }}
     ></motion.div>

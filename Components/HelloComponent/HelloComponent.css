@@ -87,6 +87,8 @@
   color: darkgray;
 }
 
+
+
 .works {
   display: flex;
   flex-direction: row;
@@ -228,11 +230,46 @@ footer > h1 {
 }
 
 .topics-details {
-  width: 50%;
+  width: 60%;
   margin: auto;
   margin-top: -100px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .topics-details > img {
-  width: 30rem;
+  width: 300px;
+  height: 200px;
+}
+
+
+.card:hover{
+  cursor: pointer
+}
+
+.description{
+  font-size: 1.5rem;
+  width: 50%;
+}
+
+.sendmail{
+  text-align: center;
+}
+
+.footer-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+
+.social h5:hover {
+  text-decoration: underline;
+}
+
+.abc h3:hover , .def h3:hover{
+  text-decoration: underline;
 }
